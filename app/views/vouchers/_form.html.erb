@@ -1,0 +1,60 @@
+<%= form_for @voucher, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="span6">
+  <div class="control-group">
+    <label class="control-label">Title</label>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field', :placeholder => 'e.g One Free DVD' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'text_area', :placeholder => 'e.g I will buy you one DVD of your choice' %>
+    </div>
+  </div>
+</div>
+<div class="span6">
+  <div class="control-group">
+    <label class="control-label">Your Name</label>
+    <div class="controls">
+      <%= f.text_field :from_name, :class => 'text_field' %>
+    </div>
+  </div>
+    <div class="control-group">
+    <label class="control-label">Your Email</label>
+    <div class="controls">
+      <%= f.text_field :from_email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Their Name</label>
+    <div class="controls">
+      <%= f.text_field :to_name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Their Email</label>
+    <div class="controls">
+      <%= f.text_field :to_email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :expires_on, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :expires_on, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :passcode, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :passcode, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary btn-large' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                vouchers_path, :class => 'btn' %>
+  </div>
+</div>
+<% end %>

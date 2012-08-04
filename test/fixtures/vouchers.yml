@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  from_name: MyString
+  to_name: MyString
+  from_email: MyString
+  to_email: MyString
+  expires_on: 2012-08-04
+  passcode: MyString
+
+two:
+  title: MyString
+  description: MyText
+  from_name: MyString
+  to_name: MyString
+  from_email: MyString
+  to_email: MyString
+  expires_on: 2012-08-04
+  passcode: MyString

@@ -1,8 +1,16 @@
 <%- model_class = Voucher -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
-                                 :default => "New #{model_class.model_name.human}") %></h1>
+  <h1>Create and Send a Voucher</h1>
 </div>
 <div class="row-fluid">
-	<%= render :partial => 'form' %>
+	<div class="span9">
+		<%= render :partial => 'form' %>
+	</div>
+	<div class="span3">
+		<div class="alert alert-info">
+			<p>
+				Create and Send a voucher to your friend. Once they use the voucher you will receive an email. Then it will be time to be true to your word. 
+			</p>
+		</div>
+
 </div>

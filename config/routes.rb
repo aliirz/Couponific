@@ -7,6 +7,10 @@ Voucherific::Application.routes.draw do
 
   root :to => 'home#index'
 
+  #match 'vouchers/new' => 'newcoupon'
+
+  #match 'vouchers' => 'coupons'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

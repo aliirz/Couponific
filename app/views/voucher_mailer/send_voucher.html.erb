@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	</head>
+	<body>
+		<h2>Hello <%= @voucher.to_name %>!</h2>
+		<p>Your friend <%= @voucher.from_name %> has just sent you a coupon. Click on the following link to view it: </p>
+		<%= voucher_url(@voucher, :host => "localhost:3000") %>
+	</body>
+</html>

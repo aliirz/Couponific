@@ -41,13 +41,6 @@
       <%= f.date_select :expires_on, :class => 'date_select' %>
     </div>
   </div>
-  <div class="control-group">
-    <%= f.label :passcode, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :passcode, :class => 'text_field' %>
-    </div>
-  </div>
-
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary btn-large' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -1,3 +1,18 @@
+<div class="hero-unit">
+  <div class="alert alert-success">
+    <h1><%= @voucher.title %></h1>
+    <h2><%= @voucher.description %></h2>
+    <p> Expires on: <%= @voucher.expires_on %> </p>
+    <p> From: <%= @voucher.from_name %> </p>
+  </div>
+  <a href="" class="btn btn-large btn-success">Use</a>
+  <%= link_to "Use Coupon", voucher_path(@voucher,:voucher => {:used => true}),
+  :method => :put,
+  :confirm => "Are you sure you want to use this coupon?" %>
+</div>
+
+
+
 <%- model_class = Voucher -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>

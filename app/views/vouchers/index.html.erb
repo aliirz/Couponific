@@ -14,6 +14,7 @@
       <th><%= model_class.human_attribute_name(:to_email) %></th>
       <th><%= model_class.human_attribute_name(:expires_on) %></th>
       <th><%= model_class.human_attribute_name(:passcode) %></th>
+      <th><%= model_class.human_attribute_name(:used) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -30,6 +31,7 @@
         <td><%= voucher.to_email %></td>
         <td><%= voucher.expires_on %></td>
         <td><%= voucher.passcode %></td>
+        <td><%= voucher.used %></td>
         <td><%=l voucher.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

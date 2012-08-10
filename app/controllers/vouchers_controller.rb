@@ -21,6 +21,15 @@ class VouchersController < ApplicationController
     end
   end
 
+  #GET /vouchers/use/1
+  def use
+    @voucher = Voucher.find(param[:id])
+    @voucher.used = true
+    @voucher.save
+    VocuherMailer.use_voucher(@voucher).deliver
+    format.html { redirect_to @voucher, notice: 'Voucher has been used.' }
+  end
+
   # GET /vouchers/new
   # GET /vouchers/new.json
   def new
@@ -44,6 +53,7 @@ class VouchersController < ApplicationController
 
     respond_to do |format|
       if @voucher.save
+        VoucherMailer.send_voucher(@voucher).deliver
         format.html { redirect_to @voucher, notice: 'Voucher was successfully created.' }
         format.json { render json: @voucher, status: :created, location: @voucher }
       else
